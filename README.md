@@ -5,3 +5,4 @@ Cheet sheets for various topics
 * [Visual Studio](visual-studio)
 * [Visual Assist](visual-assist)
 * [CSS](css)
+* [Perl](perl)
