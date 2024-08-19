@@ -1,2 +1,2 @@
 # cheat-sheets
-Cheet Sheets
+Cheet sheets for various topics
