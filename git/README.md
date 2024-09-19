@@ -11,8 +11,12 @@
 |git blame	|	|\<commit\> [--] \<filename\>	|Browses an annotated version of a file at \<commit\>|
 |git branch	|--contains	|\<commit\>	|Show the branches that contain \<commit\>|
 |git branch	|--no-contains	|\<commit\>	|Show the branches that don't contain \<commit\>|
-|git checkout	|	|- b \<branch\> \<commit\>	|Create a branch \<branch\> starting a \<commit\>|
-|git checkout	|	|- 	|Switch to the previous branch|
+|git branch |--merged | \<branch\> | List all the local branches that have been merged into \<branch\> |
+|git branch |--no-merged| \<branch\> | List all the local branches that have not been merged into \<branch\> |
+|git branch |-r --merged | \<branch\> |  List all the remote branches that have been merged into \<branch\> |
+|git branch |-r --no-merged | \<branch\> | List all the remote branches that have not been merged into \<branch\> |
+|git checkout	|-b	| \<branch\> \<commit\>	|Create a branch \<branch\> starting a \<commit\>|
+|git checkout	|-	| 	|Switch to the previous branch|
 |git checkout	|-m	|\<branch\>	|Locally renames the current branch to \<branch\>|
 |git checkout	|-m	|\<old branch\> \<new branch\>	|Locally renames \<old branch\> to \<new branch\>|
 |git cherry-pick	|	|\<commit\>[..\<commit\>]	|Cherry Pick Commit (or Range)|
@@ -32,10 +36,15 @@
 |git diff	|--cached -G	|\<regex\>	|Look for differences in staged changes that match \<regex\>.|
 |git diff	|	|\<commit\>^..\<commit\> -- \<file\>	|Show changes to \<file\> between commits|
 |git fetch	|-p	|	|Fetches from the remote and prunes deleted remote branches|
-|git format-patch	|	|-o \<dir\> [ \<since\> | \<revision range\> ]	|Create Unix mailbox-formatted patches and place them in \<dir\>|
+|git format-patch	| -o	| \<dir\> [ \<since\> | \<revision range\> ]	|Create Unix mailbox-formatted patches and place them in \<dir\>|
 |git log	|--oneline	|	|Show commits using a single line per commit|
 |git log	|--graph	|	|Show commits with a merge graph|
-|git log	|(-p | --patch)	|	|Show the diffs along with the commits|
+|git log	|(-p \| --patch)	|	|Show the diffs along with the commits|
+|git log    |--format="%aN \<%ae\>"| | List the username and email for the commits only |
+|git log    |--since="\<date\>" | | Show the commits after a \<date\> |
+|git log    |--no-merges | | Show all commits, except merge commits |
+|git log    | | \<parent\>..\<branch\> | Show the commits that differ between \<parent\> and \<branch\> |
+|git log    |--author="\<author\>" | | Show the commits for \<author\>. The author format you want is most likely "first last <email>"|
 |git merge-base	|	|\<branch\> \<branch\>	|Find the common ancestor for two branches.|
 |git merge-base	|--is-ancestor	|\<maybe commit\> \<commit\>	|Returns success if \<maybe commit\> is an ancestor of \<commit\>|
 |git pull	|-p	|	|Fetches & Merges from the remote and prunes deleted remoted branches|
