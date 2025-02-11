@@ -36,7 +36,7 @@
 |git diff	|--cached -G	|\<regex\>	|Look for differences in staged changes that match \<regex\>.|
 |git diff	|	|\<commit\>^..\<commit\> -- \<file\>	|Show changes to \<file\> between commits|
 |git fetch	|-p	|	|Fetches from the remote and prunes deleted remote branches|
-|git format-patch	| -o	| \<dir\> [ \<since\> | \<revision range\> ]	|Create Unix mailbox-formatted patches and place them in \<dir\>|
+|git format-patch	| -o	| \<dir\> [ \<since\> \| \<revision range\> ]	|Create Unix mailbox-formatted patches and place them in \<dir\>|
 |git log	|--oneline	|	|Show commits using a single line per commit|
 |git log	|--graph	|	|Show commits with a merge graph|
 |git log	|(-p \| --patch)	|	|Show the diffs along with the commits|
@@ -51,7 +51,7 @@
 |git pull	|--rebase	|	|Fetches and Rebases the remote version of the branch|
 |git rebase	|	|\<upstream\> [\<branch\>]	|Rebase \<branch\> onto \<upstream\>|
 |git rebase	|-i	|\<upstream\> [\<branch\>]	|Perform an interactive rebase of \<branch\> onto \<upstream\>|
-|git rebase	|--onto	|\<newbase | commit\> \<upstream\> \<branch\>	|Rebase \<branch\> on \<newbase\> from the common ancestor of \<upstream\> and \<branch\>. \<newbase\> |
+|git rebase	|--onto	|\<newbase \| commit\> \<upstream\> \<branch\>	|Rebase \<branch\> on \<newbase\> from the common ancestor of \<upstream\> and \<branch\>. \<newbase\> |
 |git rebase	|--continue	|	|Continue Rebase after resolving conflicts|
 |git rebase	|--abort	|	|Abort a rebase with conflicts|
 |git rebase	|--skip	|	|Skip a commit while resolving conflicts|
@@ -65,5 +65,5 @@
 |git ls-files	|	|	|Show all tracked files recursively from the current repository directory.|
 |git stash	|	|	|Creates a stash using the staged and unstaged changes, and rolls back to HEAD|
 |git stash	|--keep-index	|	|Creates a stash using the staged and unstaged changes, but leaves the changes in the working directory|
-|git stash show	|-p | --patch	|\<stash\>	|Shows a patch of the changes in a stash|
+|git stash show	|-p \| --patch	|\<stash\>	|Shows a patch of the changes in a stash|
 |git reset	|	|\<filename\>	|Removes changes to \<filename\>, but does not affect the workspace|
