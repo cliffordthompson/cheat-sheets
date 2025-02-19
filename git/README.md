@@ -29,6 +29,8 @@
 |git diff	|--cached	|	|Show the file diff for the staged files.|
 |git diff	|--name-only	|\<branch\> $(git merge-base \<branch\> \<parent-branch\>)	|Find the files that changed in \<branch\> since it branched from \<parent-branch\>|
 |git diff	|--name-only	|\<start commit\> \<end commit\>	|Find the files that changed between \<start commit\> and \<end commit\>|
+|git diff	|--name-only	|\<branch1\>..\<branch2\>	|Find the files that changed between \<branch1\> and \<branch2\>|
+|git diff |--name-only -S'\<string\>'| \<branch1\>..\<branch2\> | Find the files where the number of occurences of \<string\> changed between \<branch1\> and \<branch2\>.
 |git diff	|-w	|	|Do not show whitespace changes|
 |git diff	|--color-words	|	|Only colour the word differences, rather than the entire line|
 |git diff	|--color-words=.	|	|Only colour the character differences, rather than the entire line|
