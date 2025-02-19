@@ -35,6 +35,7 @@
 |git diff	|-G	|\<regex\>	|Look for differences in unstaged changes that match \<regex\>.|
 |git diff	|--cached -G	|\<regex\>	|Look for differences in staged changes that match \<regex\>.|
 |git diff	|	|\<commit\>^..\<commit\> -- \<file\>	|Show changes to \<file\> between commits|
+|git diff |--name-status | \<branch1\>..\<branch2\> | Show the files changed between \<branch1\> and \<branch2\>. Status will indicate 'A' for added, 'D' for deleted, and 'M' for modified. Grep could be used to filter the status type|
 |git fetch	|-p	|	|Fetches from the remote and prunes deleted remote branches|
 |git format-patch	| -o	| \<dir\> [ \<since\> \| \<revision range\> ]	|Create Unix mailbox-formatted patches and place them in \<dir\>|
 |git log	|--oneline	|	|Show commits using a single line per commit|
