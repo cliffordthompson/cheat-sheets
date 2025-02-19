@@ -62,6 +62,8 @@
 |git shortlog	|-s -n --all --no-merges	|	|Show number of commits for all users across all branches. Merge commits are ignored.|
 |git shortlog	|-s -n --all --	|\<filename\>	|Show number of commits for all users across all branches for \<filename\>. Merge commits are considered.|
 |git shortlog	|-s -n --all --no-merges --	|\<filename\>	|Show number of commits for all users across all branches for \<filename\>. Merge commits are ignored.|
+|git submodule foreach| | '\<command\>' | Execute \<command\> on all submodules. If \<command\> fails on a submodule, other submodules will not be attempted.|
+|git submodule foreach| | '\<command\> || :' | Execute \<command\> on all submodules. If \<command\> fails on a submodule, other submodules will be attempted. |
 |git ls-files	|	|	|Show all tracked files recursively from the current repository directory.|
 |git stash	|	|	|Creates a stash using the staged and unstaged changes, and rolls back to HEAD|
 |git stash	|--keep-index	|	|Creates a stash using the staged and unstaged changes, but leaves the changes in the working directory|
