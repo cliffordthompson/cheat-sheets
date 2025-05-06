@@ -1,7 +1,7 @@
 |Command	|Flag	|Parameters	|Description|
 |---|---|---|---|
-|git add 	|-i	|[\<pathspec\>]	|Enter Interactive Add Mode|
-|git add 	|-p	|[\<pathspec\>]	|Enter Interactive Patch Mode|
+|git add 	|-i	|[\<path\>]	|Enter Interactive Add Mode|
+|git add 	|-p	|[\<path\>]	|Enter Interactive Patch Mode. Allows you to choose hunks to stage.|
 |git am	|	|\<dir\>	|Apply formatted patches in \<dir\>|
 |git apply	|	|[\<patch\>]	|Apply a patch file to the workspace|
 |git apply	|-R	|\<patch\>	|Apply a inverse of a patch file. Does not reverse the removal of files.|
@@ -19,7 +19,11 @@
 |git checkout	|-	| 	|Switch to the previous branch|
 |git checkout	|-m	|\<branch\>	|Locally renames the current branch to \<branch\>|
 |git checkout	|-m	|\<old branch\> \<new branch\>	|Locally renames \<old branch\> to \<new branch\>|
-|git cherry-pick	|	|\<commit\>[..\<commit\>]	|Cherry Pick Commit (or Range)|
+|git cherry-pick	|	|\<commit\> |Cherry pick a commit.|
+|git cherry-pick	|	|\<commit1\>..\<commit2\>	|Cherry pick range of commits. \<commit1\> is excluded.|
+|git cherry-pick	|	|\<commit1\>^..\<commit2\>	|Cherry pick a range of commits. \<commit1\> is included.|
+|git cherry-pick	|	-n |\<commit\> |Cherry a commit without committing.|
+|git cherry-pick	|	-n |\<commit1\>^..\<commit2\>	|Cherry pick a range of commits without committing. \<commit1\> is included.|
 |git cherry-pick	|--continue	|	|Continue Cherry Pick after resolving conflicts|
 |git cherry-pick	|--abort	|	|Abort a cherry pick with conflicts|
 |git commit	|-a	|	|Commit all tracked files|
@@ -59,6 +63,7 @@
 |git rebase	|--abort	|	|Abort a rebase with conflicts|
 |git rebase	|--skip	|	|Skip a commit while resolving conflicts|
 |git reset	|--hard	|ORIG_HEAD	|Undo a rebase by resetting HEAD back to ORIG_HEAD.|
+|git restore |-p | [\<path\>] | Enter revert mode. Allows you to choose hunks to revert. |
 |git show	|	|\<commit\>[..\<commit\>]	|Show a diff of a commit (or range)|
 |git rm	|--cached	|\<filename\>	|Remove a file from staging but leave the file changes in the workspace|
 |git shortlog	|-s -n --all	|	|Show number of commits for all users across all branches. Merge commits are considered.|
@@ -69,6 +74,6 @@
 |git submodule foreach| | '\<command\> || :' | Execute \<command\> on all submodules. If \<command\> fails on a submodule, other submodules will be attempted. |
 |git ls-files	|	|	|Show all tracked files recursively from the current repository directory.|
 |git stash	|	|	|Creates a stash using the staged and unstaged changes, and rolls back to HEAD|
-|git stash	|--keep-index	|	|Creates a stash using the staged and unstaged changes, but leaves the changes in the working directory|
+|git stash	|--keep-index	|	|Creates a stash using the unstaged changes. Staged changes remain.|
 |git stash show	|-p \| --patch	|\<stash\>	|Shows a patch of the changes in a stash|
 |git reset	|	|\<filename\>	|Removes changes to \<filename\>, but does not affect the workspace|
