@@ -75,5 +75,6 @@
 |git ls-files	|	|	|Show all tracked files recursively from the current repository directory.|
 |git stash	|	|	|Creates a stash using the staged and unstaged changes, and rolls back to HEAD|
 |git stash	|--keep-index	|	|Creates a stash using the unstaged changes. Staged changes remain.|
+|git stash push| -m| \<message\> | Creates a stash with the give message \<message\>. |
 |git stash show	|-p \| --patch	|\<stash\>	|Shows a patch of the changes in a stash|
 |git reset	|	|\<filename\>	|Removes changes to \<filename\>, but does not affect the workspace|
