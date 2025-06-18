@@ -26,6 +26,8 @@
 |git cherry-pick	|	-n |\<commit1\>^..\<commit2\>	|Cherry pick a range of commits without committing. \<commit1\> is included.|
 |git cherry-pick	|--continue	|	|Continue Cherry Pick after resolving conflicts|
 |git cherry-pick	|--abort	|	|Abort a cherry pick with conflicts|
+|git clean || | Remove untracked files from the working tree, except ignored files. |
+|git clean | -x | | Remove untracked files from the working tree, including ignored files.|  
 |git commit	|-a	|	|Commit all tracked files|
 |git commit	|-m	|\<msg\>	|Commit staged files with the commit message in \<msg\>.|
 |git commit	|--amend	|	||
