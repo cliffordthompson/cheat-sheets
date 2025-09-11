@@ -42,7 +42,10 @@
 |git diff	|--color-words=.	|	|Only colour the character differences, rather than the entire line|
 |git diff	|-G	|\<regex\>	|Look for differences in unstaged changes that match \<regex\>.|
 |git diff	|--cached -G	|\<regex\>	|Look for differences in staged changes that match \<regex\>.|
-|git diff	|	|\<commit\>^..\<commit\> -- \<file\>	|Show changes to \<file\> between commits|
+|git diff	|	|\<commit1\>..\<commit2\> -- \<file\>	|Show changes to \<file\> between commits excluding \<commit1\>|
+|git diff	|	|\<commit1\>^..\<commit2\> -- \<file\>	|Show changes to \<file\> between commits including \<commit1\>|
+|git diff |--numstat | \<commit1\>..\<commit2\> | Show statistics for the files changed between commits excluding \<commit1\> |
+|git diff |--numstat | \<commit1\>^..\<commit2\> | Show statistics for the files changed between commits including \<commit1\> |
 |git diff |--name-status | \<branch1\>..\<branch2\> | Show the files changed between \<branch1\> and \<branch2\>. Status will indicate 'A' for added, 'D' for deleted, and 'M' for modified. Grep could be used to filter the status type|
 |git fetch	|-p	|	|Fetches from the remote and prunes deleted remote branches|
 |git format-patch | -1 | \<commit\> | Create patch based on \<commit\> |
