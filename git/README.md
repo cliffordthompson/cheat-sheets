@@ -32,6 +32,8 @@
 |git commit	|-m	|\<msg\>	|Commit staged files with the commit message in \<msg\>.|
 |git commit	|--amend	|	| Amend the previous commit |
 |git commit |--amend --reset-author | | Amend the previous commit by changing the author to the current user |
+|git config |--list | | List the current configuration settings |
+|git config |--list --show-origin | | List the current configuration settings and show how they are set (local, glocal, etc) |
 |git diff	|--name-only	|\<commit\>[..\<commit\>]	|Show files changed in commit (or range)|
 |git diff	|--cached	|	|Show the file diff for the staged files.|
 |git diff	|--name-only	|\<branch\> $(git merge-base \<branch\> \<parent-branch\>)	|Find the files that changed in \<branch\> since it branched from \<parent-branch\>|
