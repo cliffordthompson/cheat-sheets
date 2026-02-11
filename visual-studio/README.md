@@ -23,3 +23,4 @@
 |Navigate Windows	|Ctrl+Tab|
 |Move Line Up	|Alt+Up|
 |Move Line Down	|Alt+Down|
+|Re-indent Region | Ctrl-K Ctrl-F |
