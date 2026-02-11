@@ -32,6 +32,7 @@
 |git commit	|-m	|\<msg\>	|Commit staged files with the commit message in \<msg\>.|
 |git commit	|--amend	|	| Amend the previous commit |
 |git commit |--amend --reset-author | | Amend the previous commit by changing the author to the current user |
+|git commit |--amend --no-edit | | Commits and squashes into the previous commit. Previous commit message is used. |
 |git config |--list | | List the current configuration settings |
 |git config |--list --show-origin | | List the current configuration settings and show how they are set (local, glocal, etc) |
 |git diff	|--name-only	|\<commit\>[..\<commit\>]	|Show files changed in commit (or range)|
