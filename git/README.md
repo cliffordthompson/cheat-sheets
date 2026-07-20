@@ -10,6 +10,7 @@
 |git blame	|-L	|\<line1\>,\<line2\> \<filename\>	|Browses an annotated version of \<filename\> between \<line1\> and \<line2\>|
 |git blame	|	|\<commit\> [--] \<filename\>	|Browses an annotated version of a file at \<commit\>|
 |git branch	|--contains	|\<commit\>	|Show the branches that contain \<commit\>|
+|git branch	|-a --contains	|\<commit\>	|Show the branches that contain \<commit\>. Including remotes|
 |git branch	|--no-contains	|\<commit\>	|Show the branches that don't contain \<commit\>|
 |git branch |--merged | \<branch\> | List all the local branches that have been merged into \<branch\> |
 |git branch |--no-merged| \<branch\> | List all the local branches that have not been merged into \<branch\> |
